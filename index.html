@@ -4,23 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local - Storage</title>
+    <title>Local - Storage - Cursos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Ejercicio Local-Storage</h1>
+    <h1>Gestion de Cursos</h1>
 
     <form action="" id="formulario">
-        <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+        <input type="text" id="curso" placeholder="Nombre del curso">
+        <input type="text" id="profesor" placeholder="Nombre del profesor">
+        <input type="text" id="precio" placeholder="Precio del curso">
+        <input type="text" id="ciudad" placeholder="Ciudad">
+        <input type="text" id="cupo" placeholder="Cupo">
         <button type="submit">Guardar</button>
     </form>
 
-    <h2 id="saludo">Bienvenido</h2>
+    <h2 id="mensaje-curso">Aqui se mostrara el curso</h2>
 
-    <button id="borrar">Borrar nombre</button>
-
-    <a href="perfil.html">ver perfil</a>
+    <button id="borrar-curso">Borrar curso</button>
+    <br>
+    <a href="perfil.html">ver cursos</a>
 
     <script src="main.js"></script>
 </body>
