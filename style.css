@@ -1,103 +1,162 @@
-/* Reset básico */
-* {
+    /* Reset básico */
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-/* Fondo general */
-body {
-    background: #f3f6fa;
+    /* Fondo innovador */
+    body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh;
-    padding: 20px;
-    color: #333;
-}
+    padding: 2rem;
+    color: #fff;
+    background: radial-gradient(circle at top left, #e50914, transparent 40%),
+        radial-gradient(circle at bottom right, #111, transparent 40%),
+        linear-gradient(135deg, #000, #1a1a1a, #111);
+    background-size: 200% 200%;
+    animation: movimientoFondo 10s ease-in-out infinite;
+    }
 
-/* Título principal */
-h1 {
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
+    /* Animación suave del fondo */
+    @keyframes movimientoFondo {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+    }
 
-/* Formulario */
-form {
+    /* Título con fuerza */
+    h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: #e50914; /* rojo Jordan */
+    text-shadow: 2px 2px 8px rgba(229, 9, 20, 0.6);
+    margin-bottom: 1.5rem;
+    position: relative;
+    }
+
+    /* Línea decorativa debajo del título */
+    h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 0.5rem auto 0;
     background: #fff;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 0 10px #e50914;
+    }
+
+    /* Formulario */
+    form {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.25);
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 20px;
-}
+    gap: 1rem;
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.08);
+    }
 
-/* Inputs */
-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    /* Inputs */
+    form input {
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
     outline: none;
-    transition: border 0.3s;
-}
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #1c1c1c;
+    color: #fff;
+    }
 
-form input:focus {
-    border-color: #2980b9;
-}
+    form input::placeholder {
+    color: #aaa;
+    }
 
-/* Botón de guardar */
-form button {
-    padding: 10px;
-    background: #2980b9;
-    color: white;
+    form input:focus {
+    background: #e50914;
+    color: #fff;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.9);
+    }
+
+    /* Botón guardar */
+    form button {
+    padding: 1rem;
+    background: #e50914;
+    color: #fff;
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-form button:hover {
-    background: #1f6390;
-}
-
-/* Mensaje curso */
-#mensaje-curso {
-    margin: 15px 0;
-    color: #27ae60;
+    border-radius: 12px;
     font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    }
+
+    form button:hover {
+    background: #fff;
+    color: #e50914;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+    }
+
+    /* Mensaje curso */
+    #mensaje-curso {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
     text-align: center;
-}
+    letter-spacing: 2px;
+    }
 
-/* Botón borrar */
-#borrar-curso {
-    padding: 10px 15px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-bottom: 10px;
-}
-
-#borrar-curso:hover {
-    background: #c0392b;
-}
-
-/* Enlace */
-a {
-    text-decoration: none;
-    color: #2980b9;
+    /* Botón borrar */
+    #borrar-curso {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 2px solid #e50914;
+    border-radius: 12px;
+    color: #e50914;
     font-weight: bold;
-    transition: color 0.3s;
-}
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
 
-a:hover {
-    color: #1f6390;
-}
+    #borrar-curso:hover {
+    background: #e50914;
+    color: #fff;
+    transform: scale(1.08);
+    }
+
+    /* Link */
+    a {
+    margin-top: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    background: #1c1c1c;
+    transition: all 0.3s ease;
+    }
+
+    a:hover {
+    background: #e50914;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(229, 9, 20, 0.5);
+    }

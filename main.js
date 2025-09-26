@@ -40,5 +40,29 @@ formulario.addEventListener("submit", (e) => {
 
     formulario.reset();
 
+    const cursoCrear = localStorage.getItem("curso");
+
+    const objetoCurso = JSON.parse(cursoCrear); //realizamos un JSON.parse para transformar una cadena texto a un objeto y que se pueda a usar en Js
+    
+    h2.innerHTML = "curso: " + objetoCurso.nombre + '<br>' + " profesor: " + objetoCurso.profesor + '<br>' + " precio: " + objetoCurso.precio + '<br>' + " ciudad: " + objetoCurso.ciudad + '<br>' + " cupo: " + objetoCurso.cupo;
+
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cursoCrear = localStorage.getItem("curso");
+
+    if (cursoCrear) {
+
+        const objetoCurso = JSON.parse(cursoCrear); //realizamos un JSON.parse para transformar una cadena texto a un objeto y que se pueda a usar en Js
+        
+        h2.innerHTML = "curso: " + objetoCurso.nombre + '<br>' + " profesor: " + objetoCurso.profesor + '<br>' + " precio: " + objetoCurso.precio + '<br>' + " ciudad: " + objetoCurso.ciudad + '<br>' + " cupo: " + objetoCurso.cupo;
+    }
+});
+
+borrar.addEventListener("click", () => {
+
+    localStorage.removeItem("curso");
+
+    h2.textContent = "No tienes cursos guardados";
+});
