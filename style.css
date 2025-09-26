@@ -160,3 +160,71 @@
     color: #fff;
     box-shadow: 0 6px 15px rgba(229, 9, 20, 0.5);
     }
+
+/* Tabla futurista */
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+/* Encabezado */
+table thead {
+    background: #e50914;
+}
+
+table thead th {
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* Celdas */
+table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    color: #ddd;
+}
+
+/* Filas alternadas */
+table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+table tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* Hover dinámico */
+table tbody tr:hover {
+    background: rgba(229, 9, 20, 0.25);
+    transform: scale(1.01);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Bordes redondeados en la primera y última fila */
+table thead th:first-child {
+    border-top-left-radius: 12px;
+}
+table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
